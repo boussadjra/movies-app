@@ -1,35 +1,82 @@
-@import './base.css';
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+:root {
+  --color-primary: #f5f566;
+  --color-secondary: #023c40;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+@font-face {
+  font-family: 'Rubik';
+  src: url('./fonts/Rubik-VariableFont_wght.ttf') format('truetype-variations');
+  font-weight: 0 1000;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+@font-face {
+  font-family: 'Rubik';
+  src: url('./fonts/Rubik-Italic-VariableFont_wght.ttf') format('truetype-variations');
+  font-weight: 0 1000;
+  font-style: italic;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+html {
+  font-family: 'Rubik', sans-serif;
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+body {
+  background-color: #222329;
+  color: #fff;
+  padding: 2px;
+}
+
+/*utility classes*/
+
+.w-fit {
+  display: inline-block;
+  width: fit-content;
+}
+
+input,
+select {
+  background-color: #333439;
+  border: 1px solid #555657;
+  color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.btn {
+  border-radius: 4px;
+  color: #222;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 8px 16px;
+  max-height: 40px;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  color: #222;
+}
+
+.btn-primary:hover {
+  background-color: #e6e600;
+  border: 1px solid #e6e600;
+  color: #222;
+}
+
+.btn-secondary {
+  background-color: var(--color-secondary);
+  border: 1px solid var(--color-secondary);
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #023c40;
+  border: 1px solid #023c40;
+  color: #fff;
+}
+
+.btn-danger {
+  background-color: #ff0000;
+  border: 1px solid #ff0000;
+  color: #fff;
 }
